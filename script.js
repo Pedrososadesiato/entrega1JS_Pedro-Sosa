@@ -1,9 +1,9 @@
 function calcularCalorias() {
-    let genero = prompt("Ingrese su género (masculino/femenino):").toLowerCase();
-    let edad = parseInt(prompt("Ingrese su edad:"));
-    let peso = parseFloat(prompt("Ingrese su peso en kilogramos:"));
-    let altura = parseFloat(prompt("Ingrese su estatura en centímetros:"));
-    let actividad = prompt("Ingrese su nivel de actividad física (sedentario, ligero, moderado, activo, muy activo):").toLowerCase();
+    let genero = document.getElementById("genero").value;
+    let edad = parseInt(document.getElementById("edad").value);
+    let peso = parseFloat(document.getElementById("peso").value);
+    let altura = parseFloat(document.getElementById("estatura").value);
+    let actividad = document.getElementById("actividad").value;
 
     let tmb; // (Tasa Metabólica Basal)
 
@@ -41,16 +41,21 @@ function calcularCalorias() {
     }
 
     // Calorías diarias recomendadas (TMB * factor de actividad)
+
     let caloriasDiarias = tmb * factorActividad;
 
-    // Alertas con los resultados
-    alert(`Su gasto calórico diario es: ${caloriasDiarias.toFixed(2)} calorías.`);
-    alert(`Para bajar de peso, debe consumir aproximadamente: ${(caloriasDiarias - 500).toFixed(2)} calorías al día.`);
-    alert(`Para ganar masa muscular, debe consumir aproximadamente: ${(caloriasDiarias + 500).toFixed(2)} calorías al día.`);
+
+    document.getElementById("resultado").innerHTML = `
+            <p>Su gasto calórico diario es: ${caloriasDiarias.toFixed(2)} calorías.</p>
+            <p>Para bajar de peso, debe consumir aproximadamente: ${(caloriasDiarias - 500).toFixed(2)} calorías al día.</p>
+            <p>Para ganar masa muscular, debe consumir aproximadamente: ${(caloriasDiarias + 500).toFixed(2)} calorías al día.</p>
+        `;
+
+    
+    
     
 }
 
 
-calcularCalorias();
 
 
