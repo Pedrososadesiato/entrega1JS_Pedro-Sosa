@@ -4,56 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
     
 </head>
 <body>
-    <h1>Segunda Entrega</h1>
+    <h1>Entrega Final</h1>
 
+<div>
 
-<form action="">
-   <label for="genero">Genero</label>
-   <select id="genero">
-    <option value=""></option>
-    <option value="masculino">Masculino</option>
-    <option value="femenino">Femenino</option>
-</select>
+    <form action="">
+       
+        <label for="genero">Genero</label>
+        <select id="genero">
+            <option value=""></option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+        
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" min="0"><br><br>
+        
+        <label for="Peso">Peso en Kilogramos</label>
+        <input type="number" id="peso" placeholder="50"><br><br>
+        
+        <label for="estatura">Estatura en centimetros</label>
+        <input type="number" id="estatura" placeholder="185"><br><br>
+        
+        <label for="actividad">Nivel de actividad fisica</label>
+        <select name="" id="actividad">
+            <option value="sedentario">Sedentario (Ninguna actividad física)</option>
+            <option value="ligero">Ligero (Actividad física de 2 a 3 veces por semana)</option>
+            <option value="moderado">Moderado (Actividad física 3 veces por semana)</option>
+            <option value="activo">Activo (Actividad física 4 veces por semana)</option>
+            <option value="muy-activo">Muy activo (Actividad física 5 o mas veces por semana)</option>
+            
+            
+        </select>
+        
+        <button type="button" onclick="calcularCalorias()" >Calcular</button>
+        
+        <p id="resultado"></p>
+        <p id="pesoIdeal"></p>
+    </form>
+    
+</div>
+    
+    
 
-    <label for="edad">Edad</label>
-    <input type="number" id="edad" min="0"><br><br>
-
-    <label for="Peso">Peso en Kilogramos</label>
-    <input type="number" id="peso" placeholder="50"><br><br>
-
-    <label for="estatura">Estatura en centimetros</label>
-    <input type="number" id="estatura" placeholder="185"><br><br>
-
-    <label for="actividad">Nivel de actividad fisica</label>
-    <select name="" id="actividad">
-        <option value="sedentario">Sedentario (Ninguna actividad física)</option>
-        <option value="ligero">Ligero (Actividad física de 2 a 3 veces por semana)</option>
-        <option value="moderado">Moderado (Actividad física 3 veces por semana)</option>
-        <option value="activo">Activo (Actividad física 4 veces por semana)</option>
-        <option value="muy-activo">Muy activo (Actividad física 5 o mas veces por semana)</option>
-
-
-    </select>
-
-    <button type="button" onclick="calcularCalorias()" >Calcular</button>
-
-    <p id="resultado"></p>
-
-</form>
-
-
-
-
-
-
-
-
-
-
-
+        
+        <button onclick="mostrarHistorial()">Mostrar Historial</button>
+        <div id="historial"></div>
+   
+    
+    
+    
+    
+    
+    
 <script src="script.js"></script>
 </body>
 </html>
